@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.conteiner_gral{
+    min-width: 100%;
+    height: 3000px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "navbar   navbar"
+        "header   header"
+        'contacto    contacto'
+        'mensaje_intro formulario'
+        'mapa mapa'
+        'footer footer'
+
+    ;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 80px 600px repeat(3, 1fr) 150px;
+
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+nav{
+    background:#75c415 ;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 10px 50px;
+    display: flex;
+}
+
+.enlace p{
+    margin: auto 10px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.logo{
+    height: 60px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 2rem;
+    padding: 7px 13px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+li a.active, li a:hover{
+    background: rgba(219,72,89);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.fa-bars{
+    font-size: 15px;
+}
+
+
+.header{
+    grid-area: header;
+    background-image: linear-gradient(to top, rgba(255, 8, 70, 0.7) 0%, rgba(255, 177, 153, 0.7) 100%) ,url(./imagenes/img-v4/jumbotronimg4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1{
+    font-size: 7rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.contacto{
+    grid-area: contacto;
+}
+
+.intro_contacto{
+    margin: 50px;
+}
+
+.intro_contacto h2{
+    font-size: 3rem;
+    font-size: 500;
+    color: #75c415;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.conteiner_contacto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    padding: 30px 30px;
+    background-color: #75c415;
+}
+
+.card{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3{
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+
+.card p{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    padding-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.card a{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.fa-location-dot{
+    color: #fff;
+    font-size: 50px;
+}
+
+.fa-phone{
+    color: #fff;
+    font-size: 50px;
+}
+
+.fa-envelope{
+    color: #fff;
+    font-size: 50px;
+}
+
+.mensaje_intro{
+    grid-area: mensaje_intro;
+    background-color: #fff;
+    margin: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.mensaje_intro h2{
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+    color: #75c415;
+    letter-spacing: 1px;
+}
+
+.mensaje_intro p{
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    text-align: start;
+    letter-spacing: 1px;
+}
+
+.formulario{
+    grid-area: formulario;
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 40px 60px;
+    height: 600px;
+}
+
+input, textarea{
+    margin-top: 30px;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+}
+
+
+input{
+    border-bottom: solid 1px  rgba(219,72,89) ;
+    transition: all .3s ease-in-out;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: solid 2px rgba(219,72,89);
+} 
+
+input::placeholder{
+    letter-spacing: 1px;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: solid 2px rgba(219,72,89);
+}
+
+textarea::placeholder{
+    letter-spacing: 1px;
+}
+
+textarea{
+    max-width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    border-bottom: solid 1px rgba(219,72,89);
+    transition: all 0.1s ease-in; 
+
+}
+
+
+
+.formulario_boton{
+    border: none;
+    background-color: rgba(219,72,89);
+    color: #fff;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.formulario_boton:hover{
+    background-color: #75c415;
+}
+
+.mapa{
+    grid-area: mapa;
+    height: 400px;
+}
+
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgba(219,72,89);
+    display: flex;
+    text-align: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footer p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 992px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #75c415;
+        top: 79px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 2rem;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgba(219,72,89) ;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    form{
+        margin: 40px 60px;
+    }
+
+    .footer{
+        padding: 20px 0px;
+    }
+
+    .footer p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 576px){    
+    .conteiner_gral{
+        min-width: 100%;
+        height: 3000px;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+            "navbar   navbar"
+            "header   header"
+            'contacto    contacto'
+            'mensaje_intro mensaje_intro'
+            'formulario formulario'
+            'mapa mapa'
+            'footer footer'
+    
+        ;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 80px 600px repeat(4, 1fr) 150px;
+    
+    }
+
+    .header h1{
+        font-size: 4rem;
+    }
+
+    .card h3{
+        font-size: 2.5rem;
+    }
+    
+    .card p{
+        font-size: 2rem;
+    }
+    
+    .card a{
+        font-size: 2rem;
+    }
+
+    .mensaje_intro{
+        margin: 40px;
+    }
+
+    form{
+        margin: 40px;
+    }
+
+    .intro_contacto{
+        margin: 40px;
+    }
+}

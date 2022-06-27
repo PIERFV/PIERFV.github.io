@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.conteiner_gral{
+    min-width: 100%;
+    height: 3000px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "navbar   navbar"
+        "header_main   header_main"
+        'intro    intro'
+        'img_historia historia'
+        'mision img_mision'
+        'img_vision vision'
+        'valores valores'
+        'footer footer'
+
+    ;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 80px 600px repeat(5, 1fr) 150px;
+}
+
+/*navbar*/
+
+.navbar{
+    grid-area: navbar;
+}
+
+nav{
+    background:#75c415 ;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 10px 50px;
+    display: flex;
+}
+
+.enlace p{
+    margin: auto 10px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.logo{
+    height: 60px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 2rem;
+    padding: 7px 13px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+li a.active, li a:hover{
+    background: rgba(219,72,89);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+.fa-bars{
+    font-size: 15px;
+}
+
+/*header*/
+
+.header_main{
+    grid-area: header_main;
+    background-image: linear-gradient(to top, rgba(255, 8, 70, 0.7) 0%, rgba(255, 177, 153, 0.7) 100%) ,url(./imagenes/img_v2/jumbotronimg2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_main h1{
+    font-size: 7rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*texto intro*/
+
+.intro{
+    grid-area: intro;
+    background-color:#fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_intro{
+    font-size: 4rem;
+    font-weight: 500;
+    color: rgba(219,72,89);
+    letter-spacing: 1px;
+}
+
+.texto_intro{
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+}
+
+/*historia*/
+
+.historia{
+    grid-area: historia;
+    margin: 70px 50px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo_historia{
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgba(219,72,89);
+    letter-spacing: 1px;
+}
+
+.texto_historia{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.texto_historia span{
+    font-size: 3rem;
+    color: #75c415;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/*imagen historia*/
+
+.img_historia{
+    grid-area: img_historia;
+    background-image: url(./imagenes/img_v2/valoresimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+/*imagen mision*/
+
+.img_mision{
+    grid-area: img_mision;
+    background-image: url(./imagenes/img_v2/misionimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+/*mision*/
+
+.mision{
+    grid-area: mision;
+    margin: 70px 50px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo_mision{
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgba(219,72,89);
+    letter-spacing: 1px;
+}
+
+.texto_mision{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+/*imagen vision*/
+
+.img_vision{
+    grid-area: img_vision;
+    background-image: url(./imagenes/img_v2/visionimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+/*vision*/
+
+.vision{
+    grid-area: vision;
+    margin: 70px 50px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo_vision{
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgba(219,72,89);
+    letter-spacing: 1px;
+}
+
+.texto_vision{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+/*valores*/
+
+.valores{
+    grid-area: valores;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 50px;
+}
+
+.titulo_valores{
+    font-size: 4rem;
+    font-weight: 500;
+    color: rgba(219,72,89);
+    letter-spacing: 1px;
+}
+
+.conteiner_valores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, [col-start] minmax(250px, 1fr) [col-end]);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card_valores{
+    background-color: rgba(222, 222, 222);
+    padding: 20px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.fa-file-signature{
+    font-size: 40px;
+    margin: 20px 0px;
+    color: rgba(219,72,89);
+}
+
+.fa-file-circle-check{
+    font-size: 40px;
+    margin: 20px 0px;
+    color: rgba(219,72,89);
+}
+
+.fa-handshake-simple{
+    font-size: 40px;
+    margin: 20px 0px;
+    color: rgba(219,72,89);
+}
+
+.card_valores h3{
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(219,72,89);
+    letter-spacing: 1px;
+}
+
+.card_valores p{
+    padding-top: 10px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+/*footer*/
+
+.footer{
+    grid-area: footer;
+    background-color: rgba(219,72,89);
+    display: flex;
+    text-align: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footer p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+
+@media (max-width: 992px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #75c415;
+        top: 79px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 2rem;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgba(219,72,89) ;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    .texto_historia{
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-top: 5px;
+        color: black;
+    }
+    
+    .texto_historia span{
+        font-size: 2rem;
+        color: #75c415;
+        font-weight: 500;
+    }
+
+    .card_valores p{
+        font-size: 2rem;
+    }
+
+    .footer{
+        padding: 20px 0px;
+    }
+
+    .footer p{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px){
+    .conteiner_gral{
+        min-width: 100%;
+        height: 3000px;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+            "navbar   navbar"
+            "header_main   header_main"
+            'intro    intro'
+            'historia historia'
+            'mision mision'
+            'vision vision'
+            'valores valores'
+            'footer footer'
+    
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 500px repeat(5, 1fr) 150px;
+    }
+
+    .header_main h1{
+        font-size: 5rem;
+    }
+
+    .intro{
+        background-color:#75c415;
+    }
+    
+    .titulo_intro{
+        font-size: 3rem;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .texto_intro{
+        color: rgb(222, 222, 222);
+    }
+
+
+    .historia{
+        align-items: center;
+        height: 400px;
+        margin: 40px;
+    }
+    
+    .texto_historia{
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .titulo_historia{
+        text-align: center;
+    }
+
+    .mision{
+        align-items: center;
+        margin: 40px;
+        height: 300px;
+        
+    }
+
+    .texto_mision{
+        font-size: 2rem;
+    }
+
+    .vision{
+        align-items: center;
+        height: 300px;
+        margin: 40px;
+    }
+
+    .valores{
+        margin-top: 20px;
+    }
+
+    .titulo_valores{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .card_valores h3{
+        font-size: 2rem;
+    }    
+
+    .card_valores p{
+        font-size: 1.5rem;
+    }
+}
